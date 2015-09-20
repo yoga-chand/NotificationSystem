@@ -1,0 +1,9 @@
+create table books(book_id int unique not null, title varchar(50), release_date date, price numeric,authors varchar(100), publisher varchar(50))
+
+create table subscribers(subscriber_id int unique not null, subscriber_emailid varchar(50), subscriber_phone varchar(15))
+
+create table subscriber_book(id int unique not null, subscriber_id int not null, book_id int not null);
+
+create table conditions(condition_id int unique not null, attribute varchar(20), operator varchar(3))
+
+create table subscriber_condition(id int unique not null, subscriber_id int not null, condition_id int not null);
